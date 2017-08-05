@@ -31,3 +31,6 @@ class TicketPurchased(models.Model):
     price_total = models.DecimalField(max_digits=10, decimal_places=2) #price*nmb
     status = models.ForeignKey(TicketStatus) #if more than 10 minutes in new status then cancel and return self.nmb to nmb_current on TicketNumber model
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
+
+    def __str__(self):
+        return "%s %s" % (self.ticket_price.ticket.title, self.ticket_price.category.name)

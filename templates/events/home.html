@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>Privet!</h3>
+    <div class="container">
+        <div class="row">
+            {% for ticket in tickets %}
+                <div class="col-lg-3">
+
+                    <div class="ticket-item bg-white text-center">
+                        <h3>
+                            <a href="{% url 'ticket' ticket.id %}">
+                                {{ ticket.title}}
+                             </a>
+                        </h3>
+                        <p>{{ ticket.subtitle }}</p>
+                    </div>
+
+
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

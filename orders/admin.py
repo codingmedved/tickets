@@ -6,3 +6,4 @@ from .models import *
 admin.site.register(Order)
 admin.site.register(TicketStatus)
 admin.site.register(TicketNumbers)
+admin.site.register(TicketPurchased)

@@ -1,0 +1,12 @@
+body {
+    color: #323c52;
+    background-color: #daf3f4;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.ticket-item{
+    height: 200px;
+}
